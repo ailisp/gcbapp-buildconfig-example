@@ -5,6 +5,9 @@ steps:
 - name: 'gcr.io/cloud-builders/go'
   args: ['build', 'hello']
   env: ['PROJECT_ROOT=hello']
+- name: 'gcr.io/cloud-builders/go'
+  args: ['run', 'hello']
+  env: ['PROJECT_ROOT=hello']
 artifacts:
   objects:
     location: 'gs://$PROJECT_ID/'
